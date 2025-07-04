@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compétences</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 40px;
+      color: #1c3f95;
+      text-align: center;
+      max-width: 100%;
+    }
+    .grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+      flex-grow: 1;
+      flex-basis: 300px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+    ul ul {
+      list-style-type: circle;
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+    li {
+      margin: 8px 0;
+    }
+    a.btn {
+      text-decoration: none;
+      color: #1c3f95;
+      font-size: 1.1em;
+      padding: 12px 20px;
+      border: 2px solid #152a6a;
+      border-radius: 8px;
+      display: inline-block;
+      width: 100%;
+      max-width: 300px;
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0 auto 30px auto;
+      box-sizing: border-box;
+      text-align: center;
+      cursor: pointer;
+    }
+    a.btn:hover {
+      background-color: #152a6a;
+      color: white;
+    }
+
+    .back {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto 0 auto;
+      color: #333;
+      text-decoration: underline;
+      cursor: pointer;
+      text-align: center;
+      font-size: 1em;
+      font-weight: normal;
+      transition: color 0.3s;
+    }
+    .back:hover {
+      color: #1c3f95;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Compétences</h1>
+
+  <div class="grid">
+    <div class="section">
+      <h2>Mathématiques</h2>
+      <ul>
+        <li>Algèbre linéaire</li>
+        <li>Analyse numérique</li>
+        <li>Calcul numérique</li>
+        <li>Modélisation</li>
+        <li>Autres bases en mathématiques fondamentales :
+          <ul>
+            <li>Algèbre et géométrie</li>
+            <li>Topologie et calcul différentiel</li>
+            <li>Intégration et probabilités</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Informatique</h2>
+      <ul>
+        <li>Algorithmique séquentielle</li>
+        <li>Algorithmique parallèle</li>
+        <li>Programmation C</li>
+        <li>Programmation MPI et OpenMP</li>
+        <li>Programmation Python</li>
+        <li>Autres bases en architecture :
+          <ul>
+            <li>Architecture des ordinateurs</li>
+            <li>Profiling, analyse de performance et optimisation</li>
+            <li>Arithmétique à virgule flottante</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Outils et autres</h2>
+      <ul>
+        <li>Linux</li>
+        <li>GitHub</li>
+        <li>Visual Studio Code</li>
+        <li>Latex et Beamer</li>
+        <li>Autres bases de programmation :
+          <ul>
+            <li>Programmation Matlab</li>
+            <li>Programmation R</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="CV.pdf" target="_blank" class="btn">Curriculum vitæ</a>
+  </div>
+
+  <a href="../accueil.html" class="back">⬅ Retour à l'accueil</a>
+
+</body>
+</html>

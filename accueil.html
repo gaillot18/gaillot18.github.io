@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accueil</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      color: white;
+      padding: 40px 60px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      width: 180px;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn.projets {
+      background-color: #4a90e2;
+    }
+    .btn.projets:hover {
+      background-color: #3574bf;
+    }
+
+    .btn.infos {
+      background-color: #1c3f95;
+    }
+    .btn.infos:hover {
+      background-color: #152a6a;
+    }
+
+    .btn.presentation {
+      background-color: #a8d0ff;
+    }
+    .btn.presentation:hover {
+      background-color: #7aafff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Portfolio de Jean-Baptiste Gaillot</h1>
+
+  <div class="btn-container">
+    <a href="./Presentation/presentation.html" class="btn presentation">Présentation</a>
+    <a href="./Projets/projets.html" class="btn projets">Projets</a>
+    <a href="./Competences/competences.html" class="btn infos">Compétences</a>
+  </div>
+
+</body>
+</html>
