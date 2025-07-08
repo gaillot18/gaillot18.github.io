@@ -14,46 +14,63 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('../../Images/1.jpg') center/cover no-repeat;
+      filter: blur(8px);
+      z-index: -1;
+      opacity: 0.5;
+    }
     h1 {
+      color: #333;
       margin-bottom: 20px;
       text-align: center;
     }
     p {
       margin-bottom: 15px;
       line-height: 1.4;
+      font-size: 1.0em;
+      color: #333;
+      margin-bottom: 30px;
     }
     .repo {
-      margin-bottom: 25px;
-      padding: 15px;
-      background-color: white;
-      border-radius: 8px;
-      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: transparent;
+      border-radius: 0;
+      border: 2px solid #333;
     }
-    .buttons {
+    .btn-container {
       display: flex;
-      gap: 15px;
       justify-content: center;
-      margin-top: 10px;
+      gap: 40px;
+      margin-top: 20px;
       flex-wrap: wrap;
     }
-    .buttons a {
-      flex: 1;
-      min-width: 120px;
-      text-align: center;
+    .btn {
+      background-color: rgba(255, 255, 255, 0.25);
+      border: 2px solid #333;
+      color: #333;
+      border-radius: 0;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
       text-decoration: none;
-      font-weight: bold;
-      padding: 10px 15px;
-      border-radius: 8px;
-      border: 2px solid #007BFF;
-      color: #007BFF;
-      transition: background-color 0.3s, color 0.3s;
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      text-align: center;
+      width: 180px;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
-    .buttons a:hover {
-      background-color: #007BFF;
+    .btn:hover {
+      background-color: #333;
       color: white;
+      border-color: #333;
     }
-
     .back {
       display: block;
       width: 100%;
@@ -68,23 +85,25 @@
       transition: color 0.3s;
     }
     .back:hover {
-      color: #1c3f95;
+      color: #333;
     }
   </style>
 </head>
 <body>
 
+  <div class="background"></div>
+
   <h1>Restauration d’image avec l’équation de la chaleur</h1>
 
-  <p style="font-size: 1.1em; color: #555; margin-bottom: 30px;">
-    Le but de ce projet est de concevoir un schéma implicite d’approximation numérique pour résoudre l'équation de la chaleur sur un maillage fini, en utilisant la méthode des différences finies, puis de l'implémenter en Python et effectuer des applications pratiques pour le traitement d'image. <br /><br />
+  <p style="font-size: 1.0em; color: #333; margin-bottom: 30px;">
+    Le but de ce projet est de concevoir un schéma implicite d’approximation numérique pour résoudre l'équation de la chaleur sur un maillage fini, en utilisant la méthode des différences finies, puis de l'implémenter en Python et effectuer des applications pratiques pour le traitement d'image.<br /><br />
     Ce projet a été effectué dans le cadre du Master Calcul Haute Performance et Simulation (1ère année, 1er semestre à l’Université de Perpignan Via Domitia pour l’année universitaire 2024–2025), encadré par Aziz Darouichi.
   </p>
 
   <div class="repo">
-    <p><strong>Version unique (08-01-2025)</strong></p>
-    <div class="buttons">
-      <a href="Rapport.pdf" target="_blank" rel="noopener noreferrer">Rapport</a>
+    <strong>Version unique (08-01-2025)</strong>
+    <div class="btn-container">
+      <a href="Rapport.pdf" target="_blank" rel="noopener noreferrer" class="btn">Rapport</a>
     </div>
   </div>
 
