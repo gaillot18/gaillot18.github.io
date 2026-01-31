@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compétences</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('../Images/1.jpg') center/cover no-repeat;
+      filter: blur(8px);
+      z-index: -1;
+      opacity: 0.5;
+    }
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 40px;
+      color: #333;
+      text-align: center;
+      max-width: 100%;
+    }
+    .grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .section {
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 20px;
+      border-radius: 0px;
+      border: 2px solid #333;
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+      flex-grow: 1;
+      flex-basis: 300px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+    ul ul {
+      list-style-type: circle;
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+    li {
+      margin: 8px 0;
+    }
+    a.btn {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #333;
+      font-size: 1.1em;
+      padding: 12px 20px;
+      border: 2px solid #333;
+      border-radius: 0px;
+      display: inline-block;
+      width: 100%;
+      max-width: 300px;
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0 auto 30px auto;
+      box-sizing: border-box;
+      text-align: center;
+      cursor: pointer;
+    }
+    a.btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .back {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto 0 auto;
+      color: #333;
+      text-decoration: underline;
+      cursor: pointer;
+      text-align: center;
+      font-size: 1em;
+      font-weight: normal;
+      transition: color 0.3s;
+    }
+    .back:hover {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <h1>Compétences</h1>
+  <div style="text-align: center;">Liste des compétences que j'ai acquises au cours de ma licence, de mon master, ainsi que par ma curiosité personnelle :</div><br><br>
+
+  <div class="grid">
+    <div class="section">
+      <h2>Mathématiques</h2>
+      <ul>
+        <li>Algèbre linéaire</li>
+        <li>Analyse numérique</li>
+        <li>Calcul numérique</li>
+        <li>Modélisation</li>
+        <li>Autres mathématiques fondamentales
+          <ul>
+            <li>Algèbre générale (théorie des groupes et des anneaux) et géométrie (vectorielle et affine)</li>
+            <li>Topologie et calcul différentiel</li>
+            <li>Théorie de la mesure, intégration et probabilités</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Informatique</h2>
+      <ul>
+        <li>Algorithmique séquentielle</li>
+        <li>Algorithmique parallèle</li>
+        <li>Programmation <code>C</code> / <code>C++</code></li>
+        <li>Programmation <code>CUDA</code>, <code>MPI</code> et <code>OpenMP</code></li>
+        <li>Programmation <code>Python</code></li>
+        <li>Autres bases en architecture
+          <ul>
+            <li>Architecture des ordinateurs</li>
+            <li>Profiling, analyse de performances et optimisation</li>
+            <li>Arithmétique à virgule flottante</li>
+          </ul>
+        </li>
+        <li>Bases en intelligence artificielle</li>
+        <li>Bases en calcul quantique</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Outils et autres</h2>
+      <ul>
+        <li><code>Linux</code></li>
+        <li><code>Git</code> </li>
+        <li><code>Docker</code> </li>
+        <li>Visual Studio Code</li>
+        <li><code>LaTeX</code> et <code>Beamer</code></li>
+        <li>Autres bases de programmation
+          <ul>
+            <li>Programmation <code>Matlab</code></li>
+            <li>Programmation <code>R</code></li>
+          </ul>
+        <li>Outils de debuggage, de profiling et d'analyse de performances
+          <ul>
+            <li><code>gdb</code> et <code>valgrind</code></li>
+            <li><code>gprof</code> et <code>perf</code></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="CV.pdf" target="_blank" class="btn">Curriculum vitæ</a>
+  </div>
+
+  <a href="../" class="back">⬅ Retour à l'accueil</a>
+
+</body>
+</html>
