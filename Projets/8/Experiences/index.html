@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expériences</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('../../../Images/1.jpg') center/cover no-repeat;
+      filter: blur(8px);
+      z-index: -1;
+      opacity: 0.5;
+    }
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .experiences-list {
+      list-style: none;
+      padding: 0;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .exp-item {
+      margin: 25px 0;
+    }
+    .exp-card {
+      background-color: rgba(255, 255, 255, 0.25);
+      border: 2px solid #333;
+      border-radius: 0;
+      padding: 20px;
+      display: inline-block;
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+    }
+    .exp-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .btn-desc {
+      font-size: 0.85em;
+      color: #333;
+      margin-bottom: 5px;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+    .btn-group {
+      display: inline-flex;
+      border: 2px solid #333;
+      border-radius: 0;
+      overflow: hidden;
+    }
+    .btn-group .btn {
+      border: none;
+      border-radius: 0;
+      min-width: 100px;
+      padding: 10px 18px;
+      font-size: 0.95em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      user-select: none;
+      transition: background-color 0.3s, color 0.3s;
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #333;
+      line-height: 1.4;
+    }
+    .btn-group .btn:hover {
+      background-color: #333;
+      color: white;
+    }
+    .btn-group .btn-param {
+      border-right: 1px solid #333;
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #333;
+      min-width: 100px;
+      font-size: 0.95em;
+    }
+    .btn-group .btn-param:hover {
+      background-color: #333;
+      color: white;
+    }
+    .btn-group .btn-fonc {
+      border-right: 1px solid #333;
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #333;
+      min-width: 100px;
+      font-size: 0.95em;
+    }
+    .btn-group .btn-fonc:hover {
+      background-color: #333;
+      color: white;
+    }
+    code {
+      font-family: "Courier New", monospace;
+      font-weight: bold;
+    }
+    .back {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto 0 auto;
+      color: #333;
+      text-decoration: underline;
+      cursor: pointer;
+      text-align: center;
+      font-size: 1em;
+      font-weight: normal;
+      transition: color 0.3s;
+    }
+    .back:hover {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <h1>Expériences</h1>
+
+  <ul class="experiences-list">
+
+    <li class="exp-item">
+      <div class="exp-card">
+        <div class="exp-title">Modèle M. I. C. A. - Opérations de puissance et de racine carré</div>
+        <div class="btn-container">
+          <div class="btn-wrapper">
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Puissance-racine/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Puissance-racine/0-Parametres/fonction_source.py.txt" target="_blank" class="btn btn-fonc">Fonctions<br>sources</a>
+              <a href="./Resultats/Modele-MICA/Puissance-racine/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="exp-item">
+      <div class="exp-card">
+        <div class="exp-title">Modèle M. I. C. A. - Temporalité</div>
+        <div class="btn-container">
+          <div class="btn-wrapper">
+            <div class="btn-desc">itération = <code>50</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=50/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=50/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">itération = <code>100</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=100/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=100/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">itération = <code>150</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=150/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=150/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">itération = <code>200</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=200/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=200/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">itération = <code>300</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=300/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=300/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">itération = <code>500</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=500/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Temporalite/iteration=500/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="exp-item">
+      <div class="exp-card">
+        <div class="exp-title">Modèle M. I. C. A. - Altitude</div>
+        <div class="btn-container">
+          <div class="btn-wrapper">
+            <div class="btn-desc">groupe = <code>plat</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Altitude/groupe=plat/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Altitude/groupe=plat/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">groupe = <code>pente</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Altitude/groupe=pente/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Altitude/groupe=pente/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">groupe = <code>pic</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Altitude/groupe=pic/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Altitude/groupe=pic/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">groupe = <code>cuvette</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modele-MICA/Altitude/groupe=cuvette/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modele-MICA/Altitude/groupe=cuvette/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="exp-item">
+      <div class="exp-card">
+        <div class="exp-title">Modèles de rivière - Pente de frottement</div>
+        <div class="btn-container">
+          <div class="btn-wrapper">
+            <div class="btn-desc">groupe = <code>conservatif</code><br>générateur = <code>sobol</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=conservatif/generateur=sobol/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=conservatif/generateur=sobol/0-Parametres/fonction_source.py.txt" target="_blank" class="btn btn-fonc">Fonctions<br>sources</a>
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=conservatif/generateur=sobol/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">groupe = <code>conservatif</code><br>générateur = <code>morris</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=conservatif/generateur=morris/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=conservatif/generateur=morris/0-Parametres/fonction_source.py.txt" target="_blank" class="btn btn-fonc">Fonctions<br>sources</a>
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=conservatif/generateur=morris/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">groupe = <code>physique</code><br>générateur = <code>sobol</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=physique/generateur=sobol/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=physique/generateur=sobol/0-Parametres/fonction_source.py.txt" target="_blank" class="btn btn-fonc">Fonctions<br>sources</a>
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=physique/generateur=sobol/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <div class="btn-desc">groupe = <code>physique</code><br>générateur = <code>morris</code></div>
+            <div class="btn-group">
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=physique/generateur=morris/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=physique/generateur=morris/0-Parametres/fonction_source.py.txt" target="_blank" class="btn btn-fonc">Fonctions<br>sources</a>
+              <a href="./Resultats/Modeles-rivieres/Pente-frottement/groupe=physique/generateur=morris/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="exp-item">
+      <div class="exp-card">
+        <div class="exp-title">Modèles de rivière - Résolution du modèle par équations de Saint-Venant cinématique</div>
+        <div class="btn-container">
+          <div class="btn-wrapper">
+            <div class="btn-group">
+              <a href="./Resultats/Modeles-rivieres/Resolution-modele-Saint-Venant-cinematique/0-Parametres/configuration_dictionnaire.json" target="_blank" class="btn btn-param">Paramètres</a>
+              <a href="./Resultats/Modeles-rivieres/Resolution-modele-Saint-Venant-cinematique/0-Parametres/fonction_source.py.txt" target="_blank" class="btn btn-fonc">Fonctions<br>sources</a>
+              <a href="./Resultats/Modeles-rivieres/Resolution-modele-Saint-Venant-cinematique/6-Generation_rapport/rapport.html" target="_blank" class="btn">Rapport</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <a href="../" class="back">⬅ Retour à la page précédente</a>
+
+</body>
+</html>
