@@ -1,0 +1,183 @@
+####################################################################################################
+# Import des modules
+####################################################################################################
+import numpy as np
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+#
+####################################################################################################
+def calculer_indice_minute(
+    t : float,
+    tableau : np.ndarray
+    ) -> int:
+    
+    
+    indice_minute = int(t // 60)
+    if indice_minute >= tableau.shape[0]:
+        indice_minute = tableau.shape[0] - 1
+    
+    
+    return indice_minute
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+#
+####################################################################################################
+def calculer_P_k(
+    A : np.ndarray,
+    b : np.ndarray,
+    k : int
+    ) -> float:
+    
+    
+    P_k = b[k] + np.array(2, dtype = type_donnee) * A[k] / b[k]
+    
+    
+    return P_k
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+# 
+####################################################################################################
+def calculer_R_k(
+    A : np.ndarray,
+    b : np.ndarray,
+    k : int
+    ) -> float:
+    
+    
+    R_k = A[k] / (b[k] + np.array(2, dtype = type_donnee) * (A[k] / b[k]))
+    
+    
+    return R_k
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+# 
+####################################################################################################
+def calculer_Delta_t_n_saint_venant_cinematique_volume_fini(
+    CFL : float,
+    K : int,
+    Delta_s : np.ndarray,
+    b : np.ndarray,
+    r : np.ndarray,
+    S_0 : np.ndarray,
+    A : np.ndarray
+    ) -> float:
+    
+    
+    condition_locale = np.zeros(K, dtype = type_donnee)
+    
+    
+    for k in range (1, K + 1):
+        R_A_k_n = calculer_R_k(A, b, k)
+        P_A_k_n = calculer_P_k(A, b, k)
+        c_A_k = (np.sqrt(S_0[k]) / r[k]) * (R_A_k_n ** np.array(2.0 / 3.0, dtype = type_donnee) + np.array(2, dtype = type_donnee) / np.array(3, dtype = type_donnee) * b[k] * A[k] ** np.array(2.0 / 3.0, dtype = type_donnee) / P_A_k_n ** np.array(5.0 / 3.0, dtype = type_donnee))
+        condition_locale[k - 1] = Delta_s[k] / c_A_k
+    
+    
+    Delta_t_n = CFL * np.min(condition_locale)
+    Delta_t_n = np.array(Delta_t_n, dtype = type_donnee)
+    
+    
+    return Delta_t_n
+####################################################################################################
+
+
+
+
+
+####################################################################################################
+#
+####################################################################################################
+def resoudre_saint_venant_cinematique_volume_fini_upwind_conservatif(
+    A_entree : list,
+    Q_entree : list
+    ) -> np.ndarray:
+    
+    
+    global type_donnee
+    type_donnee = type(A_entree[0])
+    A = np.array(A_entree, dtype = type_donnee)
+    Q = np.array(Q_entree, dtype = type_donnee)
+    
+    
+    # Fixation de certaines variables
+    nombre_minute = 1
+    L_s = np.array(100.0, dtype = type_donnee)
+    L_t = np.array(nombre_minute * 60.0, dtype = type_donnee)
+    K = len(A) - 2
+    Delta_s = np.r_[0, (2 * np.arange(1, K + 1) - 1) * L_s / (2 * K + 1), L_s]
+    Delta_s = np.array(Delta_s, dtype = type_donnee)
+    b = np.array([10.0] * (K + 2), dtype = type_donnee)
+    r = np.array([0.035] * (K + 2), dtype = type_donnee)
+    S_0 = np.array([0.01] * (K + 2), dtype = type_donnee)
+    q = np.array([[0.0] * (K + 2)] * nombre_minute, dtype = type_donnee)
+    Delta_t = 0.5
+    
+    
+    t_actuel = np.array(0.0, dtype = type_donnee)
+    n = 0
+
+
+    while t_actuel <= L_t:
+        
+        
+        A_precedent = A.copy()
+        Q_precedent = Q.copy()
+
+
+        q_n = q[calculer_indice_minute(t_actuel, q), :]
+
+
+        for k in range(1, K + 1):
+            
+
+            # Calcul de A
+            A[k] = (
+                A_precedent[k] 
+                - (Delta_t / Delta_s[k]) * (Q_precedent[k] - Q_precedent[k - 1])
+                + Delta_t * q_n[k]
+                )
+
+
+            # Calcul de Q
+            Q[k] = (
+                A[k]
+                * calculer_R_k(A, b, k) ** np.array(2.0 / 3.0, dtype = type_donnee)
+                * np.sqrt(S_0[k])
+                / r[k]
+                )
+
+
+        A[K + 1] = A[K]
+        Q[K + 1] = Q[K]
+        
+        
+        t_actuel += Delta_t
+        n += 1
+    
+    
+    A_sortie = A
+    Q_sortie = Q
+
+
+    return A_sortie, Q_sortie
+####################################################################################################

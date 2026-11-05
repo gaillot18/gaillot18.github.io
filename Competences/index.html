@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compétences</title>
+  <style>
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 900px;
+      margin: 40px auto 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.25);
+      border: 2px solid #333;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+    .logos img {
+      height: 60px;         /* ajuste la hauteur souhaitée */
+      width: auto;
+      object-fit: contain;
+    }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('../Images/1.jpg') center/cover no-repeat;
+      filter: blur(8px);
+      z-index: -1;
+      opacity: 0.5;
+    }
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 40px;
+      color: #333;
+      text-align: center;
+      max-width: 100%;
+    }
+    .grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .section {
+      background-color: rgba(255, 255, 255, 0.25);
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #333;
+      width: 100%;
+      max-width: 600px;
+      box-sizing: border-box;
+      flex-grow: 1;
+      flex-basis: 600px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+    ul ul {
+      list-style-type: circle;
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+    li {
+      margin: 8px 0;
+    }
+    a.btn {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #333;
+      font-size: 1.1em;
+      padding: 12px 20px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      display: inline-block;
+      width: 100%;
+      max-width: 300px;
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0 auto 30px auto;
+      box-sizing: border-box;
+      text-align: center;
+      cursor: pointer;
+    }
+    a.btn:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .back {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto 0 auto;
+      color: #333;
+      text-decoration: underline;
+      cursor: pointer;
+      text-align: center;
+      font-size: 1em;
+      font-weight: normal;
+      transition: color 0.3s;
+    }
+    .back:hover {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <h1>Compétences</h1>
+  <div style="text-align: center;">Liste des compétences que j'ai acquises au cours de ma licence, de mon master, ainsi que par ma curiosité personnelle :</div><br><br>
+
+  <div class="grid">
+    <div class="section">
+      <h2>Mathématiques appliquées</h2>
+      <ul>
+        <li>Analyse et calcul numérique :</li>
+        <ul>
+            <li>Résolution numérique d'équation aux dérivées partielles : méthodes des différences finies, des volumes finis et des éléments finis</li>
+            <li>Résolution numérique de problèmes de Cauchy : méthodes d'intégration</li>
+            <li>Interpolation</li>
+            <li>Résolution numérique de systèmes linéaires creux : méthodes de factorisations de matrice</li>
+            <li>Méthodes d'optimisation : méthode de Newton-Raphson, de la descente de gradient, ...</li>
+        </ul>
+        <li>Modélisation</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Mathématiques fondamentales</h2>
+      <ul>
+            <li>Algèbre :</li>
+            <ul>
+              <li>Algèbre générale : théorie des groupes, des anneaux et des corps, et arithmétique dans \(\mathbb{Z}\) et \(\mathbb{Z}/n\mathbb{Z}\)</li>
+              <li>Algèbre linéaire : espaces vectoriels et réductions d'endomorphisme</li>
+              <li>Algèbre bilinéaire : espaces pré-hilbertiens, espaces euclidiens, et géométrie vectorielle</li>
+              <li>Algèbre affine : applications affines, espaces affines, et géométrie affine</li>
+            </ul>
+            <li>Analyse :
+            <ul>
+              <li>Calcul différentiel</li>
+              <li>Topologie</li>
+              <li>Théorie de la mesure, intégration et probabilités</li>
+            </ul>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Informatique</h2>
+      <ul>
+        <li>Algorithmique séquentielle et parallèle</li>
+        <li>Programmation en langages <code>C</code> / <code>C++</code> :</li>
+        <ul>
+            <li>Programmation séquentielle CPU</li>
+            <li>Programmation parallèle CPU : bibliothèques <code>MPI</code> et <code>OpenMP</code></li>
+            <li>Programmation parallèle GPU sur carte graphique NVIDIA : bibliothèque <code>CUDA</code></li>
+          </ul>
+        <li>Programmation en langage <code>Python</code></li>
+        <li>Autres bases en architecture :
+          <ul>
+            <li>Compilation et langage assembleur</li>
+            <li>Architecture des ordinateurs</li>
+            <li>Profiling, analyse de performances et optimisation</li>
+            <li>Arithmétique à virgule flottante</li>
+          </ul>
+        </li>
+        <li>Bases en apprentissage automatique pour des modèles d'intelligence artificielle : LLM et CNN</li>
+        <li>Bases en calcul quantique</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Outils informatique</h2>
+      <ul>
+        <li><code>Linux</code> / <code>MacOS</code></li>
+        <li><code>Git</code> </li>
+        <li><code>Docker</code> </li>
+        <li><code>LaTeX</code> / <code>Beamer</code></li>
+        <li>Autres bases de programmation :
+          <ul>
+            <li>Programmation en langage <code>Makefile</code> et <code>sh</code></li>
+            <li>Programmation en langage <code>Matlab</code>, <code>Julia</code> et <code>R</code></li>
+          </ul>
+        <li>Outils de debuggage, de profiling et d'analyse de performances pour les programmes en langage <code>C</code> / <code>C++</code> :
+          <ul>
+            <li>Debuggage : outil <code>gdb</code> </li>
+            <li>Analyse de la mémoire : outil <code>valgrind</code></li>
+            <li>Profiling : outil <code>gprof</code> </li>
+            <li>Analyse de performance : outil <code>perf</code></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--<div class="logos">
+    <img src="../Images/C.svg.webp" alt="Logo 1" />
+    <img src="../Images/CPP.svg.webp" alt="Logo 2" />
+    <img src="../Images/MPI.png" alt="Logo 3" />
+    <img src="../Images/OpenMP.png" alt="Logo 4" />
+    <img src="../Images/CUDA.png" alt="Logo 5" />
+    <img src="../Images/Python.png" alt="Logo 6" />
+    <img src="../Images/Docker.png" alt="Logo 7" />
+    <img src="../Images/LaTeX.svg" alt="Logo 8" />
+    <img src="../Images/Matlab.png" alt="Logo 9" />
+    <img src="../Images/Julia.svg.webp" alt="Logo 10" />
+    <img src="../Images/R.svg.webp" alt="Logo 11" />
+  </div>-->
+
+  <div style="text-align: center;">
+    <a href="CV.pdf" target="_blank" class="btn">Curriculum vitæ</a>
+  </div>
+
+  <a href="../" class="back">⬅ Retour à l'accueil</a>
+
+</body>
+</html>

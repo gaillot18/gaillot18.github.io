@@ -1,0 +1,22 @@
+def traitement_vecteur(
+    alpha,
+    v
+    ):
+    
+    
+    w = [0.0 for i in range (len(v))]
+    sigma = 0.0
+    pi = 1.0
+    
+    
+    for i in range (len(v)):
+        w[i] = alpha * v[i]
+        sigma += w[i]
+        pi *= w[i]
+        
+        
+    return (
+        sigma,
+        pi,
+        w
+        )
