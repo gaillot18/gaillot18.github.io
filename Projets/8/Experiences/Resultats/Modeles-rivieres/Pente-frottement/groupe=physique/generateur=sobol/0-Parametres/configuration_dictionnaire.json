@@ -1,0 +1,205 @@
+{
+  "informations": {
+    "utilisateur_nom": "Jean-Baptiste Gaillot",
+    "date": "2026-07-30",
+    "commentaire": "/"
+  },
+  "parametres": {
+    "debug": false,
+    "fonction_source": "fonction_source.py",
+    "generateur_dictionnaire": {
+      "generateur": "sobol",
+      "generateur_tableau": [""]
+    },
+    "graine": 1,
+    "fonction_tableau": ["calculer_S_f_1_p", "calculer_S_f_2_p", "calculer_S_f_3_p"],
+    "nombre_entree_approximatif": 1000000,
+    "nombre_execution": 1,
+    "entree_compact_info_tableau": [
+      ["b", [], [], [5.0, 15.0]],
+      ["r", [], [], [0.025, 0.045]],
+      ["h", [], [], [1.0, 5.0]],
+      ["u", [], [], [0.0, 5.0]]
+    ],
+    "sortie_compact_info_tableau": [
+      ["S_f", [], []]
+    ],
+    "backend_dictionnaire": {
+      "backend_tableau": ["ieee"],
+      "parametre_backend_dictionnaire": {
+        "precision_numpy_tableau": [16, 32, 64],
+        "precision_numpy_reference": 64,
+        "precision_binary64_tableau": [],
+        "tolerance_tableau": []
+      }
+    },
+    "analyse_dictionnaire": {
+      "Analyse_domaine": {
+        "activation": true
+      },
+      "Analyse_numerique": {
+        "Erreur_compact": {
+          "activation": true
+        },
+        "Erreur_spatial_non_compact": {
+          "activation": false
+        },
+        "Erreur_discret_non_compact": {
+          "activation": true,
+          "nombre_sous_intervalle": 25
+        },
+        "Erreur_barre_non_compact": {
+          "activation": true
+        },
+        "Enveloppe_quantile_chiffre_significatif_non_compact": {
+          "activation": true,
+          "base": 2
+        },
+        "echelle_valeur_minimum": 1e-10,
+        "echelle_valeur_maximum": 1e-2
+      },
+      "Analyse_parametrique": {
+        "Nuage_comportement": {
+          "activation": true
+        },
+        "Matrice_similitude": {
+          "activation": true
+        },
+        "Matrice_sobol": {
+          "activation": true
+        },
+        "Barre_sobol": {
+          "activation": true
+        },
+        "Indice_sobol_spatial": {
+          "activation": false
+        },
+        "Indice_morris": {
+          "activation": false
+        },
+        "Indice_morris_spatial": {
+          "activation": false
+        }
+      }
+    },
+    "nombre_ligne_par_fichier": 10000,
+    "chemin_base": "Resultats/0-Parametres/"
+  },
+  "Repertoire_racine": "/Repertoire_racine/",
+  "resultats": {
+    "Preparation": {
+      "chemin_base": "Resultats/1-Preparation/",
+      "chemin_dictionnaire": {
+        "chemin_nombre_entree": "nombre_entree.txt",
+        "chemin_entree_dataframe": "entree_dataframe.pkl",
+        "chemin_entree_info_dataframe": "entree_info_dataframe.csv",
+        "chemin_entree_nom_reduit_dataframe": "entree_nom_reduit_dataframe.csv",
+        "chemin_sortie_info_dataframe": "sortie_info_dataframe.csv",
+        "chemin_sortie_nom_reduit_dataframe": "sortie_nom_reduit_dataframe.csv",
+        "chemin_temps_execution": "temps_execution.txt"
+      }
+    },
+    "Resolution": {
+      "chemin_base": "Resultats/2-Resolution/",
+      "chemin_dictionnaire": {
+        "chemin_temps_execution": {
+          "chemin_base": "temps_execution/"
+        }
+      }
+    },
+    "Recuperation_resultats": {
+      "chemin_base": "Resultats/3-Recuperation_resultats/",
+      "chemin_dictionnaire": {
+        "chemin_resultat_brut_dataframe": "resultat_brut_dataframe.parquet",
+        "chemin_temps_execution": "temps_execution.txt"
+      }
+    },
+    "Calcul_statistiques": {
+      "chemin_base": "Resultats/4-Calcul_statistiques/",
+      "Analyse_domaine": {
+        "chemin_base": "Analyse_domaine/",
+        "chemin_dictionnaire": {
+          "chemin_entree_nom_uniforme_tableau": "entree_nom_uniforme_tableau.npy"
+        }
+      },
+      "Analyse_numerique": {
+        "chemin_base": "Analyse_numerique/",
+        "chemin_dictionnaire": {
+          "chemin_resultat_statistique_elabore_dataframe": "resultat_statistique_elabore_dataframe.parquet",
+          "chemin_resultat_statistique_enveloppe_quantile_non_compact_dataframe": "resultat_statistique_enveloppe_quantile_non_compact_dataframe.parquet",
+          "chemin_resultat_statistique_erreur_discret_non_compact_dataframe": "resultat_statistique_erreur_discret_non_compact_dataframe.parquet",
+          "chemin_resultat_statistique_erreur_non_compact_dataframe": "resultat_statistique_erreur_non_compact_dataframe.parquet",
+          "chemin_resultat_statistique_erreur_compact_dataframe": "resultat_statistique_erreur_compact_dataframe.parquet"
+        }
+      },
+      "Analyse_parametrique": {
+        "chemin_base": "Analyse_parametrique/",
+        "chemin_dictionnaire": {
+          "chemin_resultat_statistique_similitude_dataframe": "resultat_statistique_similitude_dataframe.parquet",
+          "chemin_resultat_statistique_indice_sobol_dataframe": "resultat_statistique_indice_sobol_dataframe.parquet",
+          "chemin_resultat_statistique_indice_morris_dataframe": "resultat_statistique_indice_morris_dataframe.parquet"
+        }
+      },
+      "chemin_dictionnaire": {
+        "chemin_temps_execution": "temps_execution.txt"
+      }
+    },
+    "Creation_graphiques": {
+      "chemin_base": "Resultats/5-Creation_graphiques/",
+      "Analyse_domaine": {
+        "chemin_base": "Analyse_domaine/"
+      },
+      "Analyse_numerique": {
+        "chemin_base": "Analyse_numerique/",
+        "Erreur_compact": {
+          "chemin_base": "Erreur_compact/"
+        },
+        "Erreur_spatial_non_compact": {
+          "chemin_base": "Erreur_spatial_non_compact/"
+        },
+        "Erreur_discret_non_compact": {
+          "chemin_base": "Erreur_discret_non_compact/"
+        },
+        "Erreur_barre_non_compact": {
+          "chemin_base": "Erreur_barre_non_compact/"
+        },
+        "Enveloppe_quantile_chiffre_significatif_non_compact": {
+          "chemin_base": "Enveloppe_quantile_chiffre_significatif_non_compact/"
+        }
+      },
+      "Analyse_parametrique": {
+        "chemin_base": "Analyse_parametrique/",
+        "Nuage_comportement": {
+          "chemin_base": "Nuage_comportement/"
+        },
+        "Matrice_similitude": {
+          "chemin_base": "Matrice_similitude/"
+        },
+        "Indice_sobol_spatial": {
+          "chemin_base": "Indice_sobol_spatial/"
+        },
+        "Matrice_sobol": {
+          "Matrice_sobol": "Matrice_sobol/"
+        },
+        "Barre_sobol": {
+          "chemin_base": "Barre_sobol/"
+        },
+        "Indice_morris": {
+          "chemin_base": "Indice_morris/"
+        },
+        "Indice_morris_spatial": {
+          "chemin_base": "Indice_morris_spatial/"
+        }
+      },
+      "chemin_dictionnaire": {
+        "chemin_temps_execution": "temps_execution.txt"
+      }
+    },
+    "Generation_rapport": {
+      "chemin_base": "Resultats/6-Generation_rapport/",
+      "chemin_dictionnaire": {
+        "chemin_rapport": "rapport.md"
+      }
+    }
+  }
+}
